@@ -82,7 +82,7 @@
             bindings = <
 &kp Q             &kp L         &kp U         &kp COMMA                    &kp PERIOD                                            &kp LANGUAGE_2            &kp LANGUAGE_3  &lt 5 R  &kp Y  &kp P
 &kp E             &kp I         &kp A         &kp O                        &kp MINUS    &kp LS(LG(S))             &kp MINUS      &kp INT_KATAKANAHIRAGANA  &kp LANG1       &kp N    &kp S  &kp H
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp SLASH    &kp COLON                 &kp SEMICOLON  &kp LANG5                 &kp D           &kp M    &kp J  &kp B
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp SLASH    &kp COLON                 &kp SEMICOLON  &kp LANG5                 &kp INT5        &kp M    &kp J  &kp B
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 1 ENTER                                               &kp DEL
             >;
 
