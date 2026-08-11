@@ -32,12 +32,12 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp GRAVE>;
             key-positions = <11 12>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
+        machenkan {
+            bindings = <&kp LC(SPACE)>;
             key-positions = <12 13>;
         };
 
@@ -54,6 +54,16 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        hidarikurikku {
+            bindings = <&mkp MB1>;
+            key-positions = <19 18>;
+        };
+
+        migikurikku {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
         };
     };
 
@@ -76,23 +86,25 @@
             tapping-term-ms = <200>;
         };
 
-              encoder_msc_down_up: encoder_msc_down_up {
+        encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
-keymap {
+
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q             &kp L         &kp U         &kp COMMA                    &kp PERIOD                                                       &kp F        &kp W  &lt 5 R  &kp Y  &kp P
-&kp E             &kp I         &kp A         &kp O                        &kp MINUS      &kp LS(LG(S))                      &kp MINUS      &kp K        &kp T  &kp N    &kp S  &kp H
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp SEMICOLON  &kp COLON                          &kp SEMICOLON  &kp G        &kp D  &kp M    &kp J  &kp B
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE    &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                         &kp SLASH
+&kp Q             &kp L         &kp U         &kp COMMA               &kp PERIOD                                                &kp F        &kp W  &lt 5 R  &kp Y  &kp P
+&kp E             &kp I         &kp A         &kp O                   &kp MINUS      &kp LS(LG(S))               &kp MINUS      &kp K        &kp T  &kp N    &kp S  &kp H
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp SEMICOLON  &kp COLON                   &kp SEMICOLON  &kp G        &kp D  &kp M    &kp J  &kp B
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 GRAVE  &lt 2 TAB      &lt_to_layer_0 3 SPACE      &kp BACKSPACE  &lt 1 ENTER                         &kp SLASH
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
